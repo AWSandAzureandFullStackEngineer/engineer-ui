@@ -40,16 +40,9 @@ pipeline {
                     sh 'docker system prune -af --volumes'
                 }
             }
-            post {
-                always {
-                    cleanWs(cleanWhenNotBuilt: false,
-                        deleteDirs: true,
-                        disableDeferredWipeout: true,
-                        notFailBuild: true,
-                        patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
-                        [pattern: '.propsfile', type: 'EXCLUDE']]) {
-
-                    }
+            stage("Cleanup Workspace") {
+                steps {
+                    cleanWs()
                 }
             }
         }
