@@ -21,7 +21,7 @@ pipeline {
                 steps {
                     script {
                         withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
-                            sh ('kubectl apply -f deployment.yml')
+                            sh 'kubectl apply -f deployment.yaml' --validate=true
                         }
                     }
                 }
@@ -30,7 +30,7 @@ pipeline {
                 steps {
                     script {
                         withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
-                            sh ('kubectl apply -f service.yml')
+                            sh 'kubectl apply -f service.yml' --validate=true
                         }
                     }
                 }
