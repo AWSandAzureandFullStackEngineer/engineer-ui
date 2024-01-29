@@ -21,7 +21,7 @@ pipeline {
                 steps {
                     script {
                         withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
-                            sh ('kubectl apply -f  deployment.yml')
+                            sh ('kubectl apply -f deployment.yml')
                         }
                     }
                 }
@@ -40,6 +40,7 @@ pipeline {
                     sh 'docker system prune -af --volumes'
                 }
             }
+
             stage("Cleanup Workspace") {
                 steps {
                     cleanWs()
