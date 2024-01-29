@@ -4,16 +4,20 @@ pipeline {
         stages {
             stage("Install") {
                 steps {
-                    echo "----------- Install started ----------"
-                        sh 'npm install'
-                    echo "----------- Install completed ----------"
+                    script {
+                        echo "----------- Install started ----------"
+                            sh 'npm install'
+                        echo "----------- Install completed ----------"
+                   }
                 }
             }
             stage("Build") {
                 steps {
-                    echo "----------- Install started ----------"
-                        sh 'npm run build'
-                    echo "----------- Install completed ----------"
+                    script {
+                        echo "----------- Install started ----------"
+                            sh 'npm run build'
+                        echo "----------- Install completed ----------"
+                    }
                 }
             }
             stage('SonarQube analysis') {
