@@ -12,7 +12,7 @@ pipeline {
             stage("build"){
                 steps {
                     echo "----------- build started ----------"
-                        sh 'npm build'
+                        sh 'npm run build'
                     echo "----------- build completed ----------"
                 }
             }
