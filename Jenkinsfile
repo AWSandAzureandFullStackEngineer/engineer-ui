@@ -74,7 +74,7 @@ pipeline {
                 steps {
                     cleanWs()
                 }
-            }
-        }
+         }
     }
+
 }
