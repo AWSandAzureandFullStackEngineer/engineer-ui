@@ -2,6 +2,13 @@ pipeline {
     agent any
 
         stages {
+
+            stage('Chechout') {
+                  steps {
+                    git([url: 'https://github.com/AWSandAzureandFullStackEngineer/engineer-ui.git', branch: 'main', credentialsId: 'github'])
+
+                  }
+                }
             stage("Install") {
                 steps {
                     script {
