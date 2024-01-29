@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-        def notifySlack(String buildStatus = 'STARTED') {
+        notifySlack(String buildStatus = 'STARTED') {
             // Build status of null means success.
             buildStatus = buildStatus ?: 'SUCCESS'
 
