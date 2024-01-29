@@ -2,18 +2,12 @@ pipeline {
     agent any
 
         stages {
-            stage("Install") {
+            stage("Install and build") {
                 steps {
                     echo "----------- Install started ----------"
                         sh 'npm install'
-                    echo "----------- Install completed ----------"
-                }
-            }
-            stage("build") {
-                steps {
-                    echo "----------- build started ----------"
                         sh 'npm run build'
-                    echo "----------- build completed ----------"
+                    echo "----------- Install completed ----------"
                 }
             }
             stage('SonarQube analysis') {
