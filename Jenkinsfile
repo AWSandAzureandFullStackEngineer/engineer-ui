@@ -1,23 +1,24 @@
 pipeline {
     agent any
 
-    stages {
-            stage("Install"){
+        stages {
+            stage("Install") {
                 steps {
                     echo "----------- Install started ----------"
                         sh 'npm install'
                     echo "----------- Install completed ----------"
                 }
             }
-    stages {
-        stage("build"){
-            steps {
-                echo "----------- build started ----------"
-                    sh 'npm build'
-                echo "----------- build completed ----------"
+        }
+        stages {
+            stage("build"){
+                steps {
+                    echo "----------- build started ----------"
+                        sh 'npm build'
+                    echo "----------- build completed ----------"
+                }
             }
         }
-
         stage('SonarQube analysis') {
             environment {
                 scannerHome = tool 'sonar-scanner'
@@ -30,7 +31,7 @@ pipeline {
         }
         stage("Docker Build and Push") {
             steps {
-                sh ' docker buildx build --push --platform linux/amd64 --tag steven8519/engineer-service:20240125025201 .'
+                sh ' docker buildx build --push --platform linux/amd64 --tag steven8519/engineer-ui:latest .'
             }
         }
         stage('K8S Deploy') {
