@@ -5,6 +5,13 @@ pipeline {
             stage("Install and build") {
                 steps {
                     echo "----------- Install started ----------"
+                        sh 'npm install'
+                    echo "----------- Install completed ----------"
+                }
+            }
+            stage("Install and build") {
+                steps {
+                    echo "----------- Install started ----------"
                         sh 'npm run build'
                     echo "----------- Install completed ----------"
                 }
