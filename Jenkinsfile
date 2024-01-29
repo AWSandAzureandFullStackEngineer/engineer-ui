@@ -13,7 +13,7 @@ pipeline {
                 steps {
                     script {
                         echo "----------- Install started ----------"
-                            sh 'yarn install'
+                            sh 'yarn'
                         echo "----------- Install completed ----------"
                    }
                 }
