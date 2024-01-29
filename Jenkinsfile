@@ -2,31 +2,6 @@ pipeline {
     agent any
 
         stages {
-
-            stage('Chechout') {
-                  steps {
-                    git([url: 'https://github.com/AWSandAzureandFullStackEngineer/engineer-ui.git', branch: 'main', credentialsId: 'github'])
-
-                  }
-                }
-            stage("Install") {
-                steps {
-                    script {
-                        echo "----------- Install started ----------"
-                            sh 'yarn'
-                        echo "----------- Install completed ----------"
-                   }
-                }
-            }
-            stage("Build") {
-                steps {
-                    script {
-                        echo "----------- Install started ----------"
-                            sh 'yarn build'
-                        echo "----------- Install completed ----------"
-                    }
-                }
-            }
             stage('SonarQube analysis') {
                 environment {
                     scannerHome = tool 'sonar-scanner'
