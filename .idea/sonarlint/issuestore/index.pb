@@ -15,3 +15,6 @@ H
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 A
 package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
+:
+
+Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
