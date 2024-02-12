@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the custom nginx.conf to the appropriate directory in the Nginx server
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /nginx/nginx.conf
 
 
 # Copy the built Next.js application from the previous stage to the Nginx server directory
