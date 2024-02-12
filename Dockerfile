@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:latest
 
 # Copy the built assets from the build directory to the Nginx server directory
-COPY engineer-ui /usr/share/nginx/html
+COPY ./ /usr/share/nginx/html
 
 # Copy custom Nginx configuration file
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
