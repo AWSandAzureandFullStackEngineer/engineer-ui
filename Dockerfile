@@ -1,5 +1,5 @@
 # Use the official Node.js 18 base image
-FROM node:20.0.0-alpine
+FROM node:20.0.0-alpine AS build
 
 # Set the working directory
 WORKDIR /app
@@ -16,17 +16,17 @@ COPY . .
 # Build the Next.js application
 RUN npm run build
 
-# Use Nginx as the production server
-FROM nginx:alpine
+# Use the official Nginx image as the base image
+FROM nginx:latest
 
-# Copy the custom nginx.conf to the appropriate directory in the Nginx server
-COPY nginx/nginx.conf /nginx/nginx.conf
+# Copy the built assets from the build directory to the Nginx server directory
+COPY engineer-ui/build /usr/share/nginx/html
 
-# Copy the built Next.js application from the previous stage to the Nginx server directory
-COPY --from=0 /app/build /usr/share/nginx/html
+# Copy custom Nginx configuration file
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx when the container starts
+# Command to start Nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
