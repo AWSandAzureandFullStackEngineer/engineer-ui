@@ -20,10 +20,10 @@ RUN npm run build
 FROM nginx:latest
 
 # Copy the built assets from the build directory to the Nginx server directory
-COPY engineer-ui /usr/share/nginx/html
+COPY ./build /usr/share/nginx/html
 
 # Copy custom Nginx configuration file
-COPY nginx/nginx.conf nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
