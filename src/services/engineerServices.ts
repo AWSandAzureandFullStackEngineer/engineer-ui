@@ -14,7 +14,7 @@ const EngineerService = {
   registerEngineer: async (engineer: Engineer): Promise<boolean> => {
 
     try {
-      await axios.post('/api/1.0/users/register', engineer).get;
+      await axios.post('/api/1.0/users/register', engineer);
       return true;
     } catch (error) {
       console.error('Registration failed:', error);
