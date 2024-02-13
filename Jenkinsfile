@@ -17,22 +17,18 @@ pipeline {
                     sh ' docker buildx build --push --platform linux/amd64 --tag steven8519/engineer-ui:latest .'
                 }
             }
-            stage('K8S Deploy') {
-                steps {
-                    script {
-                        withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
-                            sh ('kubectl apply -f deployment.yaml')
+            stage('Approval') {
+                        steps {
+                            script {
+                                def deploymentDelay = input id: 'Deploy',
+                                message: 'Deploy to production?' [1]
+                            }
                         }
                     }
-                }
-            }
-            stage('K8S Service') {
+            stage('Deployment into production') {
                 steps {
-                    script {
-                        withKubeConfig([credentialsId: 'K8S', serverUrl: '']) {
-                            sh ('kubectl apply -f service.yaml')
-                        }
-                    }
+                    echo "triggering updateuimanifest"
+                    build job: 'updateuimanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
                 }
             }
             stage("Delete docker images") {
