@@ -1,5 +1,5 @@
 # Use the official Node.js 18 base image
-FROM node:20.0.0-alpine AS build
+FROM node:20.0.0-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -19,8 +19,5 @@ RUN npm run build
 # Expose the port your Next.js app will run on
 EXPOSE 80
 
-# production env
-FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Command to run your application
+CMD ["yarn", "start"]
