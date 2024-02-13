@@ -16,8 +16,8 @@ import {
   IconProps,
   Icon,
 } from '@chakra-ui/react'
-import {useState} from "react";
-import EngineerService from "../services/engineerServices";
+import {useState} from 'react';
+import EngineerService from '../services/engineerService.ts';
 
 const avatars = [
   {

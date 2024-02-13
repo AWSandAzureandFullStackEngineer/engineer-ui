@@ -1,32 +1,30 @@
-# Use the official Node.js 18 base image
+# Use an official Node.js image as the base
 FROM node:20.0.0-alpine AS build
 
-# Set the working directory
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /src
 
-# Copy package.json and package-lock.json to install dependencies
-COPY package*.json ./
+# Copy package.json and package-lock.json
+COPY package.json .
+COPY yarn.lock .
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Copy the rest of the application code
 COPY . .
 
-# Build the Next.js application
-RUN npm run build
+# Build the application
+RUN yarn build
 
-# Use the official Nginx image as the base image
-FROM nginx:latest
+# Stage 2 - Serve the build output using a lightweight Nginx server
+FROM nginx:stable-alpine
 
-# Copy the built assets from the build directory to the Nginx server directory
-COPY ./ /usr/share/nginx/html
-
-# Copy custom Nginx configuration file
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
+# Copy the built files from the previous stage
+COPY --from=build /src /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
 
-# Command to start Nginx when the container starts
+# Command to run Nginx
 CMD ["nginx", "-g", "daemon off;"]
