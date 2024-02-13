@@ -16,8 +16,8 @@ COPY . .
 # Build the application
 RUN yarn build
 
-# Expose port 80
-EXPOSE 5174
+# Expose port 3000
+EXPOSE 3000
 
 # Command to run Nginx
-CMD ["yarn", "dev"]
+CMD ["yarn", "start"]

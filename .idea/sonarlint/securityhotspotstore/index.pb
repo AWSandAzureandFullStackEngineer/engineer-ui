@@ -14,3 +14,7 @@ Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 deployment.yaml,a/6/a6219c80b63abe020f8ab9c671706c1510541743
 <
 service.yaml,b/8/b8f0e0ea7c47609f243af2d09ffaf10eba128465
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
