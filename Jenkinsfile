@@ -12,9 +12,21 @@ pipeline {
                     }
                 }
             }
-            stage("Docker Build and Push") {
+            stage('Build image') {
                 steps {
-                    sh ' docker buildx build --push --platform linux/amd64 --tag steven8519/engineer-ui:latest .'
+                    script {
+                        // Build Docker image
+                        docker.build('steven8519/engineer-ui')
+                    }
+                }
+            }
+            stage('Push image') {
+                steps {
+                    script {
+                        docker.withRegistry('', 'dockerhub') {
+                            docker.image('steven8519/engineer-ui').push(env.BUILD_NUMBER)
+                        }
+                    }
                 }
             }
             stage('Approval') {
