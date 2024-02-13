@@ -31,16 +31,5 @@ pipeline {
                     build job: 'updateuimanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
                 }
             }
-            stage("Delete docker images") {
-                steps {
-                    sh 'docker system prune -af --volumes'
-                }
-            }
-
-            stage("Cleanup Workspace") {
-                steps {
-                    cleanWs()
-                }
-            }
         }
     }
