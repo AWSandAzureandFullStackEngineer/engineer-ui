@@ -16,14 +16,8 @@ COPY . .
 # Build the application
 RUN yarn build
 
-# Stage 2 - Serve the build output using a lightweight Nginx server
-FROM nginx:stable-alpine
-
-# Copy the built files from the previous stage
-COPY --from=build /src /usr/share/nginx/html
-
 # Expose port 80
-EXPOSE 80
+EXPOSE 5174
 
 # Command to run Nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["yarn", "dev"]

@@ -16,4 +16,4 @@ spec:
         - name: engineer-ui
           image: steven8519/engineer-ui:latest # Replace with your Docker image
           ports:
-            - containerPort: 80
+            - containerPort: 5174
