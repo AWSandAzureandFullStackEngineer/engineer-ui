@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 80
 
 # Command to run your application
-CMD ["yarn", "start"]
+CMD ["yarn", "build"]
