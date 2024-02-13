@@ -19,4 +19,4 @@ RUN npm run build
 # Expose the port your Next.js app will run on
 EXPOSE 80
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
