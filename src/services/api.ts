@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const registerUser = async (userData: any) => {
   try {
-    const response = await api.post('http://localhost:8081', userData);
+    const response = await api.post('https://engineershubcentral.net:8081', userData);
     return response.data;
   } catch (error) {
     throw new Error('Failed to register user');
