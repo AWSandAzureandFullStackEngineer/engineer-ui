@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f90fb0bc-5cb2-409d-a74f-1e2187ac0a25" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/README 2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig 2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RegistrationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RegistrationPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
       <updated>1707789865437</updated>
       <workItem from="1707789866583" duration="6581000" />
       <workItem from="1707875820022" duration="147000" />
-      <workItem from="1707875975691" duration="5428000" />
+      <workItem from="1707875975691" duration="6182000" />
     </task>
     <servers />
   </component>
