@@ -6,28 +6,37 @@ Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-:
-
-src/App.js,1/e/1e43fa63aecd2127be034b3fb9d4caa172275714
 ;
 src/App.tsx,8/3/835da56f32df714aaed6285a5b7fc3a7807851e4
-<
-src/main.tsx,6/0/60f616ca71634bb2f8a78d5984d3a0127c05d567
-U
-%src/authentication/authentication.tsx,b/c/bc166dadc554c1c176a6baef55e7f4cb36d1a613
 ;
 src/App.css,a/a/aa7165aefcf8ee3d73539e99ab007daf1aa18d8d
 ?
 src/App.test.js,9/2/923703ced91ac38943d37930d9d27a7ebe8f01ad
 <
 src/index.js,f/9/f900edc44cb929c2267a16100a32851f6d5b477d
-=
-tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
-B
-tsconfig.node.json,c/d/cd346bdc6f8eee39e4d280aa9a6f7949c2133a71
->
-vite.concig.ts,7/1/713f1f671d4f9d6da32f68f7197438ba534df13f
+?
+deployment.yaml,a/6/a6219c80b63abe020f8ab9c671706c1510541743
 H
-src/services/services.ts,e/c/eccb99b9493e95e1a0c8b06e9e85b02d3194be56
-O
-src/services/engineerService.ts,3/e/3ecd7eec2d5b320b784c2ffaaddfbae06c94f440
+sonar-project.properties,2/5/2538046035efb77ecc44e1fd2eec1e2641594d4c
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+;
+Jenkinsfile,0/c/0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
+A
+package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
+=
+src/index.tsx,5/a/5ab44fe33ca96299f51ad4778a73e425b92bf439
+=
+src/index.css,c/5/c5d38a62d1faae90a2acaa34b79a7ef365c917e4
+S
+#src/components/RegistrationPage.tsx,3/d/3d17eb2ec3a1ffd5da8c0197d82a78cafb0a6e32
+M
+src/components/PageHeader.tsx,8/b/8bc82b365eea33ae94180b62857f372a68a382f3
+I
+src/components/Button.tsx,7/1/71f8231de31ad010a7e33cadeaff70bcc86fef30
+S
+#src/components/RegistrationForm.tsx,f/1/f160e74f5adfcfaf2d8ed6466ae55948347841b6
+C
+src/services/api.ts,5/6/5639ba02c96106fc6655a4e97e24c0100bad7926
+A
+src/tsconfig.json,f/4/f48486f491a6cc1de5c7d3cb2474784ae98e4dcf
