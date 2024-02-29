@@ -12,8 +12,6 @@ Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 src/App.css,a/a/aa7165aefcf8ee3d73539e99ab007daf1aa18d8d
 ?
 src/App.test.js,9/2/923703ced91ac38943d37930d9d27a7ebe8f01ad
-<
-src/index.js,f/9/f900edc44cb929c2267a16100a32851f6d5b477d
 ?
 deployment.yaml,a/6/a6219c80b63abe020f8ab9c671706c1510541743
 H
@@ -38,5 +36,5 @@ S
 #src/components/RegistrationForm.tsx,f/1/f160e74f5adfcfaf2d8ed6466ae55948347841b6
 C
 src/services/api.ts,5/6/5639ba02c96106fc6655a4e97e24c0100bad7926
-A
-src/tsconfig.json,f/4/f48486f491a6cc1de5c7d3cb2474784ae98e4dcf
+=
+tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
