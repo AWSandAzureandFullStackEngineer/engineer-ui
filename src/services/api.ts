@@ -12,5 +12,4 @@ export const registerUser = async (userData: any) => {
     throw new Error('Failed to register user');
   }
 };
-
 export default api;
